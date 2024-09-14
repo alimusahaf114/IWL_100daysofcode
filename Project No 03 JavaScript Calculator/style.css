@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  margin-top: 30px;
+  width: 340px;
+  height: 550px;
+  padding: 10px;
+  border-radius: 20px;
+  background: linear-gradient(to top, #201917, #0883e7);
+  height: 500px;
+  overflow: auto;
+}
+.input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+input {
+  font-size: 2.2rem;
+  padding: 20px;
+  width: 100%;
+  height: 100px;
+  font-weight: bold;
+  box-sizing: border-box;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.buttons {
+  display: grid;
+  padding: 10px;
+  margin-top: 20px;
+  gap: 10px;
+  grid-template-columns: repeat(4, 74px);
+}
+button {
+  padding: 20px;
+  font-size: 1.3rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #34383a;
+}
+#equal {
+  grid-column: span 2;
+  background: rgba(68, 67, 67, 0.5);
+  color: #34a4ff;
+}
+#equal:hover {
+  background: rgba(63, 63, 63, 0.5);
+  color: #2ea0fd;
+}
+#equal:active {
+  background: rgba(72, 71, 71, 0.5);
+  color: #2ea0fd;
+}
+#zero {
+  grid-column: span 2;
+  background: rgba(68, 67, 67, 0.5);
+  color: #34a4ff;
+}
+#zero:hover {
+  background: rgba(63, 63, 63, 0.5);
+  color: #2ea0fd;
+}
+#zero:active {
+  background: rgba(72, 71, 71, 0.5);
+  color: #2ea0fd;
+}
+#num {
+  background: rgba(68, 67, 67, 0.5);
+  color: #34a4ff;
+}
+#num:hover {
+  background: rgba(63, 63, 63, 0.5);
+  color: #2ea0fd;
+}
+#num:active {
+  background: rgba(72, 71, 71, 0.5);
+  color: #2ea0fd;
+}
+#symb {
+  background: rgba(20, 103, 204, 0.8);
+  color: #c9cbcd;
+}
+#symb:hover {
+  background: rgba(16, 92, 184, 0.8);
+  color: #d4d7da;
+}
+#symb:active {
+  background: rgba(18, 102, 205, 0.8);
+  color: #d4d7da;
+}
+#control {
+  background: rgba(137, 138, 139, 0.8);
+  color: #c7c9ca;
+}
+#control:hover {
+  background: rgba(119, 120, 121, 0.8);
+  color: #d8dadb;
+}
+#control:active {
+  background: rgba(138, 138, 139, 0.8);
+  color: #d8dadb;
+}
+
+/* Media query for screens with a width less than or equal to 768px (tablets and small devices) */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: auto; /* Allow height to adjust for content */
+    padding: 15px;
+  }
+
+  input {
+    font-size: 1.8rem;
+    padding: 15px;
+    height: 80px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr); /* Make columns equal */
+    gap: 5px;
+  }
+}
+
+/* Media query for screens with a width less than or equal to 480px (small mobile devices) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input {
+    font-size: 1.5rem;
+    padding: 10px;
+    height: 60px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(4, 1fr); /* Keep equal-width columns */
+    gap: 5px;
+  }
+}
